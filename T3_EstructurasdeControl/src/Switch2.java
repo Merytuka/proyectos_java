@@ -10,7 +10,7 @@ public class Switch2 {
             case 'E':
             case 'I':
             case 'O':
-            case 'e':
+            case 'U':
                 System.out.println("Es Vocal");
                 break;
             default:
