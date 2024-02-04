@@ -3,11 +3,14 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Entornos/Entornos.iml" filepath="$PROJECT_DIR$/Entornos/Entornos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PildInfPOO/PildInfPOO.iml" filepath="$PROJECT_DIR$/PildInfPOO/PildInfPOO.iml" />
       <module fileurl="file://$PROJECT_DIR$/T2_Base/T2_Base.iml" filepath="$PROJECT_DIR$/T2_Base/T2_Base.iml" />
       <module fileurl="file://$PROJECT_DIR$/T3_EstructurasdeControl/T3_EstructurasdeControl.iml" filepath="$PROJECT_DIR$/T3_EstructurasdeControl/T3_EstructurasdeControl.iml" />
       <module fileurl="file://$PROJECT_DIR$/T4_Arrays/T4_Arrays.iml" filepath="$PROJECT_DIR$/T4_Arrays/T4_Arrays.iml" />
+      <module fileurl="file://$PROJECT_DIR$/T5_ProgramacionModular/T5_ProgramacionModular.iml" filepath="$PROJECT_DIR$/T5_ProgramacionModular/T5_ProgramacionModular.iml" />
       <module fileurl="file://$PROJECT_DIR$/area_circulo/area_circulo.iml" filepath="$PROJECT_DIR$/area_circulo/area_circulo.iml" />
       <module fileurl="file://$PROJECT_DIR$/maria_gonzalez_DAW1_t1_t1/maria_gonzalez_DAW1_t1_t1.iml" filepath="$PROJECT_DIR$/maria_gonzalez_DAW1_t1_t1/maria_gonzalez_DAW1_t1_t1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/maria_gonzalez_DAW_t1_t2/maria_gonzalez_DAW_t1_t2.iml" filepath="$PROJECT_DIR$/maria_gonzalez_DAW_t1_t2/maria_gonzalez_DAW_t1_t2.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/proyectos_java.iml" filepath="$PROJECT_DIR$/.idea/proyectos_java.iml" />
       <module fileurl="file://$PROJECT_DIR$/pruebas/pruebas.iml" filepath="$PROJECT_DIR$/pruebas/pruebas.iml" />
     </modules>
