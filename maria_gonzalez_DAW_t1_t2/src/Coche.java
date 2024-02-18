@@ -1,15 +1,16 @@
-
+import java.text.DecimalFormat;
 
 public class Coche {
 
     private String marca, modelo, matricula;
-    private int cv, cc, velocidad, kmRecorridos;
+    private int cv, cc;
+    private double velocidad, kmRecorridos;
 
     public Coche() {
 
     }
 
-    public Coche(String marca, String modelo, String matricula, int cv, int cc, int velocidad, int kmRecorridos) {
+    public Coche(String marca, String modelo, String matricula, int cv, int cc, double velocidad, double kmRecorridos) {
         this.marca = marca;
         this.modelo = modelo;
         this.matricula = matricula;
@@ -67,26 +68,33 @@ public class Coche {
         return cc;
     }
 
-    public int getVelocidad() {
+    public double getVelocidad() {
         return velocidad;
     }
 
-    public int getKmRecorridos() {
+    public double getKmRecorridos() {
         return kmRecorridos;
     }
 
+    public String formatearDouble ( double datosMostrados){
+        DecimalFormat formato = new DecimalFormat("#.##");
+        String decimallFormateado = formato.format(datosMostrados);
+        return decimallFormateado;
+    }
+
     public String mostrarDatos() {
+
         return
                 "Marca: " + this.getMarca() + "\n" +
                         "Modelo: " + this.getModelo() + "\n" +
                         "Matrícula: " + this.getMatricula() + "\n" +
                         "CC: " + this.getCc() + "\n" +
                         "CV: " + this.getCv() + "\n" +
-                        "Velocidad atual: " + this.getVelocidad() + " Km/h" + "\n" +
-                        "Km Recorridos: " + this.getKmRecorridos() + " Km";
+                        "Velocidad atual: " + formatearDouble(this.getVelocidad()) + " Km/h" + "\n" +
+                        "Km Recorridos: " + formatearDouble(this.getKmRecorridos()) + " Km";
     }
 
-    public int acelerar(int aceleracion) {
+    public double acelerar(double aceleracion) {
 
 
         if (cv < 100) {
@@ -101,7 +109,7 @@ public class Coche {
 
     }
 
-    public boolean validarAceleracon(int aceleracion) {
+    public boolean validarAceleracon(double aceleracion) {
         if (aceleracion >= 10) {
             return true;
         } else {

@@ -1,8 +1,10 @@
 import javax.swing.*;
+import java.text.DecimalFormat;
 
 public class Carrera {
     private Coche participante1, participante2, ganador;
-    private int kmTotales, vueltas;
+    private double kmTotales;
+    private int vueltas;
 
     public void setParticipante1(Coche participante1) {
         this.participante1 = participante1;
@@ -27,11 +29,11 @@ public class Carrera {
 
     }
 
-    public int aceleracion(Coche participante) {
-        int aceleracionIntroducida = 0;
+    public double aceleracion(Coche participante) {
+        double aceleracionIntroducida = 0;
 
         do {
-            aceleracionIntroducida = Integer.parseInt(JOptionPane.showInputDialog("Introduce Aceleración del " + participante.getMarca()));
+            aceleracionIntroducida = Double.parseDouble(JOptionPane.showInputDialog("Introduce Aceleración del " + participante.getMarca()));
             if (participante.validarAceleracon(aceleracionIntroducida)) {
 
                 participante.acelerar(aceleracionIntroducida);
@@ -43,9 +45,16 @@ public class Carrera {
         } while (!participante.validarAceleracon(aceleracionIntroducida));
         return participante.getKmRecorridos();
     }
+    public String formatearDouble ( double datosMostrados){
+        DecimalFormat formato = new DecimalFormat("#.##");
+        String decimallFormateado = formato.format(datosMostrados);
+        return decimallFormateado;
+    }
 
     public void datosVuelta(Coche participante, int vuelta) {
-        System.out.println("Vuelta " + vuelta + " Participante-->" + participante.getMarca() + " Km recorridos: " + participante.getKmRecorridos());
+
+        System.out.println("Vuelta " + vuelta + " Participante-->" + participante.getMarca() + " Km recorridos: "
+                + formatearDouble(participante.getKmRecorridos()));
 
     }
 
@@ -81,14 +90,16 @@ public class Carrera {
     }
 
     public String mostrarDatosGanador() {
+
         return
+
                 "Marca: " + ganador.getMarca() + "\n" +
                         "Modelo: " + ganador.getModelo() + "\n" +
                         "Matrícula: " + ganador.getMatricula() + "\n" +
                         "CC: " + ganador.getCc() + "\n" +
                         "CV: " + ganador.getCv() + "\n" +
-                        "Velocidad máxima: " + ganador.getVelocidad() + " Km/h" + "\n" +
-                        "Km Recorridos: " + ganador.getKmRecorridos() + " Km";
+                        "Velocidad máxima: " + formatearDouble(ganador.getVelocidad()) + " Km/h" + "\n" +
+                        "Km Recorridos: " + formatearDouble(ganador.getKmRecorridos()) + " Km";
     }
 
     public Carrera(Coche participante1, Coche participante2, int kmTotales, int vueltas) {

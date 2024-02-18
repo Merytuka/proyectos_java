@@ -13,6 +13,7 @@ public class Entrada {
 
         System.out.println("🚥 LA CARRERA VA A COMENZAR 🚥");
 
+
         carrera.iniciarCarrera();
 
         System.out.println("🏁LA CARRERA HA FINALIZADO🏁\nGANADOR: ");
