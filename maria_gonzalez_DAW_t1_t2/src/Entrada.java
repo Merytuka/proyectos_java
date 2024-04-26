@@ -1,5 +1,4 @@
-import javax.swing.*;
-import java.sql.SQLOutput;
+
 
 public class Entrada {
     public static void main(String[] args) {
